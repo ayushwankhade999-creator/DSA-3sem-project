@@ -28,7 +28,7 @@ public class InventoryTracker {
     static ArrayList<Product> inventory = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
 
-    // Add product
+
     static void addProduct() {
         System.out.print("Enter Product ID: ");
         int id = sc.nextInt();
@@ -48,7 +48,7 @@ public class InventoryTracker {
         System.out.println("Product added successfully!");
     }
 
-    // Display all products
+
     static void displayProducts() {
         if (inventory.isEmpty()) {
             System.out.println("Inventory is empty!");
@@ -62,7 +62,7 @@ public class InventoryTracker {
         }
     }
 
-    // Search product by ID
+
     static void searchProduct() {
         System.out.print("Enter Product ID to search: ");
         int id = sc.nextInt();
@@ -78,7 +78,7 @@ public class InventoryTracker {
         System.out.println("Product not found!");
     }
 
-    // Sort products by price
+
     static void sortByPrice() {
         Collections.sort(inventory,
             Comparator.comparingDouble(p -> p.price));
@@ -87,7 +87,7 @@ public class InventoryTracker {
         displayProducts();
     }
 
-    // Sort products by name
+
     static void sortByName() {
         Collections.sort(inventory,
             Comparator.comparing(p -> p.name.toLowerCase()));
@@ -96,7 +96,7 @@ public class InventoryTracker {
         displayProducts();
     }
 
-    // Update product quantity
+
     static void updateQuantity() {
         System.out.print("Enter Product ID: ");
         int id = sc.nextInt();
@@ -114,7 +114,7 @@ public class InventoryTracker {
         System.out.println("Product not found!");
     }
 
-    // Delete product
+
     static void deleteProduct() {
         System.out.print("Enter Product ID to delete: ");
         int id = sc.nextInt();
@@ -130,7 +130,7 @@ public class InventoryTracker {
         System.out.println("Product not found!");
     }
 
-    // Main method
+
     public static void main(String[] args) {
 
         int choice;
